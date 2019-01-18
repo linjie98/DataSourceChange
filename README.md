@@ -8,7 +8,7 @@
 
 #### 3、以上环境完成后，可以根据DataSourceChange中的application.properties配置进行相关配置
 
-#### 4、测试，在测试类DataSourceChangeDemoApplicationTests中执行test即可
+#### 4、测试，在测试类DataSourceChangeDemoApplicationTests中执行test即可，通过改变testService.ChangeDataSource("datasource2");参数即可改变数据源
 
 #### 5、若需要添加数据源，只需要在application.properties中添加新数据源配置以及在config下的DataSourceConfiguration下通过以下模版将新数据源写入即可
 
@@ -23,7 +23,7 @@
     public DataSource datasource1() {
         return DruidDataSourceBuilder.create().build();
     }
-    ```
+   
      
 
    
