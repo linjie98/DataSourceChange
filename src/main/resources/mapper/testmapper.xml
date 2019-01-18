@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace用于绑定Dao接口 -->
+<mapper namespace="com.example.demo.dao.testmapper">
+    <!-- 查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.domain.testID" >
+        <!-- column代表数据库列名，property代表实体类属性名 -->
+        <result column="id" property="id"/>
+    </resultMap>
+
+
+    <!-- 查询idsql -->
+    <select id="selectID" parameterType="Integer" resultMap="BaseResultMap">
+        SELECT id FROM test1
+    </select>
+
+
+</mapper>
+
